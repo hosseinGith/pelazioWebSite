@@ -1,0 +1,51 @@
+@media screen and (min-width:500px) {
+    .rightContent svg {
+        display: flex;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .leftContent {
+        display: flex;
+    }
+    .phoneOptionContainer {
+        display: none;
+    }
+    .broSliderImg {
+        display: flex;
+    }
+    .mainTopMenu {
+        display: block;
+    }
+    .sectionImage4 .imageContainer4 {
+        flex-direction: row;
+    }
+    footer .contactWe .textContact {
+        display: flex;
+    }
+    footer .contactWe .soshalMedia>div {
+        flex-direction: row;
+    }
+    footer .aboutPlaziu {
+        flex-direction: row;
+    }
+    footer .aboutPlaziu .rightContentFooter {
+        display: flex;
+    }
+    footer .aboutPlaziu .phoneContentFooter {
+        display: none;
+    }
+}
+
+@media screen and (min-width:992px) {
+    .rightContent svg {
+        display: none;
+    }
+}
+
+@media screen and (min-width:1366px) {
+    body>* {
+        margin: 0 auto;
+        max-width: 1366px;
+    }
+}
