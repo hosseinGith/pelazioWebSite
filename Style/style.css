@@ -806,7 +806,9 @@ header {
     aspect-ratio: 16/9;
     object-fit: contain;
 }
-
+.item .text1MainImageCard {
+    margin: 30px 0;
+}
 .slider2Container .item .priceContainer {
     width: 100%;
     font-size: 1.3em;
