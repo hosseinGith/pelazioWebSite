@@ -902,7 +902,9 @@ header {
 .images6Container img {
     border-radius: 20px;
 }
-
+.owl-dots {
+    display: none;
+}
 .bottomUniversity>div {
     width: 100%;
     display: flex;
