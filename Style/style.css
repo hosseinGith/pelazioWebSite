@@ -1182,6 +1182,7 @@ footer .aboutPlaziu .phoneContentFooter .logoImgFotter img {
 
 /* ----------------------phone menu------------------ */
 
+
 .phoneOptionContainer {
     width: 100%;
     position: fixed;
@@ -1200,28 +1201,37 @@ footer .aboutPlaziu .phoneContentFooter .logoImgFotter img {
     justify-content: space-between;
 }
 
-.phoneOptionContainer>div>div {
+.phoneOptionContainer>div>a {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.phoneOptionContainer>div>div a {
-    display: flex;
     flex-direction: column;
     text-align: center;
+    color: #000000a1;
 }
 
-.phoneOptionContainer>div>div i {
+.phoneOptionContainer>div>a i {
     font-size: 7vw;
     color: #000000a1;
 }
 
-.phoneOptionContainer>div>div span {
+.phoneOptionContainer>div>a span {
     font-size: 3vw;
     font-weight: 600;
     color: #000;
+}
+
+.show {
+    display: flex;
+}
+
+.hide {
+    display: none;
+}
+
+.showB {
+    display: block;
 }
 
 .show {
