@@ -964,6 +964,7 @@ header {
 
 .aboutShop .aboutShopContainer .paragraphAboutShop p {
     width: 80%;
+    text-align:justify;
 }
 
 .btnPhone {
