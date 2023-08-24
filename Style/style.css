@@ -1,1247 +1,1262 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
 @font-face {
-    font-family: yekan;
-    src: url('../font/Yekan.ttf') format('truetype');
+  font-family: yekan;
+  src: url("../font/Yekan.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: vazir;
-    src: url('../font/vazir-font-v16.1.0/Vazir-Bold.ttf') format('truetype');
+  font-family: vazir;
+  src: url("../font/vazir-font-v16.1.0/Vazir-Bold.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: nazanin;
-    src: url('../font/Far_Nazanin.ttf') format('truetype');
+  font-family: nazanin;
+  src: url("../font/Far_Nazanin.ttf") format("truetype");
 }
 
 :root {
-    --p-color: #00000088;
+  --p-color: #00000088;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #0000008e;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #eee;
 }
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style-type: none;
-    transition: all .1s;
-    scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  transition: all 0.1s;
+  scroll-behavior: smooth;
+  user-select: none;
 }
 
 body {
-    font-family: vazir, yekan, nazanin;
-    position: relative;
-    font-size: 16px;
+  font-family: vazir, yekan, nazanin;
+  position: relative;
+  font-size: 16px;
 }
 
 main {
-    position: relative;
+  position: relative;
 }
 
 main section {
-    width: 100%;
-    padding: 0 30px;
-    margin: 20px 0;
+  width: 100%;
+  padding: 0 30px;
+  margin: 20px 0;
 }
 
 .navbarContainer {
-    width: 100%;
-    height: 100%;
-    background-color: #00000060;
-    position: fixed;
-    display: none;
-    transition: all .3s;
-    z-index: 1000;
+  width: 100%;
+  height: 100%;
+  background-color: #00000060;
+  position: fixed;
+  display: none;
+  transition: all 0.3s;
+  z-index: 1000;
 }
 
 .navbarContainer a {
-    color: #000;
+  color: #000;
 }
 
 .navbarContainer .menu {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    gap: 20px;
-    background-color: #fff;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 20px;
+  background-color: #fff;
 }
 
-.navbarContainer .menu nav>ul>li>span {
-    margin: 10px 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
+.navbarContainer .menu nav > ul > li > span {
+  margin: 10px 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
 }
 
 .navbarContainer .menu nav ul li ul {
-    display: none;
-    flex-direction: column;
+  display: none;
+  flex-direction: column;
 }
 
-.navbarContainer .menu nav>ul>li>ul>li {
-    display: flex;
-    padding: 10px 10px;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
+.navbarContainer .menu nav > ul > li > ul > li {
+  display: flex;
+  padding: 10px 10px;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
 }
 
-.navbarContainer .menu nav>ul>li>ul>li:hover>span {
-    color: #000000a2;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
+.navbarContainer .menu nav > ul > li > ul > li:hover > span {
+  color: #000000a2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
 }
 
 .navbarContainer .menu nav ul li span svg {
-    fill: #00000096;
-    width: 10px;
+  fill: #00000096;
+  width: 10px;
 }
 
 .navbarContainer .menu nav ul li span:hover svg {
-    fill: red;
+  fill: red;
 }
 
-.navbarContainer .menu>nav>ul>li:nth-last-child(2) {
-    margin: 10px 0;
+.navbarContainer .menu > nav > ul > li:nth-last-child(2) {
+  margin: 10px 0;
 }
 
 .loginContainer {
-    width: 100%;
-    height: 100%;
-    z-index: 1000;
-    position: fixed;
-    background-color: #00000060;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    font-size: 16px;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  position: fixed;
+  background-color: #00000060;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 16px;
 }
 
 .loginContainer .loginC {
-    width: 400px;
-    height: 500px;
-    padding: 0 20px;
-    gap: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: #fff;
-    text-align: center;
-    border-radius: 16px;
-    overflow: hidden;
+  width: 400px;
+  height: 500px;
+  padding: 0 20px;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 16px;
+  overflow: hidden;
 }
 
 .loginContainer .loginC .outLoginContainer {
-    width: 100%;
-    text-align: end;
-    font-size: 1.3em;
+  width: 100%;
+  text-align: end;
+  font-size: 1.3em;
 }
 
 .loginContainer .loginC .outLoginContainer i {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .loginContainer .loginC .outLoginContainer i:active {
-    color: tomato;
+  color: tomato;
 }
 
 .loginContainer .loginC .paragraph {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .loginContainer .loginC .paragraph p:first-child {
-    font-size: 1.5em;
-    color: #000000d5;
+  font-size: 1.5em;
+  color: #000000d5;
 }
 
 .loginContainer .loginC .loginInputs {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .loginContainer .loginC .loginInputs div {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    margin: 10px 0;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 10px 0;
 }
 
 .loginContainer .loginC .loginInputs div label {
-    padding: 0 10px;
-    background-color: #fff;
-    position: absolute;
-    top: -12px;
-    right: 10px;
+  padding: 0 10px;
+  background-color: #fff;
+  position: absolute;
+  top: -12px;
+  right: 10px;
+  border-radius: 16px;
 }
 
-.loginContainer .loginC .loginInputs div>input {
-    width: 100%;
-    padding: 10px 5px;
-    font-size: 1.2em;
-    border-radius: 20px;
-    outline: 0;
-    border: 1px solid #00000048;
-    direction: ltr;
+.loginContainer .loginC .loginInputs div > input {
+  width: 100%;
+  padding: 10px 5px;
+  font-size: 1.2em;
+  border-radius: 20px;
+  outline: 0;
+  border: 1px solid #00000048;
+  direction: ltr;
 }
 
 .loginContainer .loginC .checkBox {
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .loginContainer .loginC .btnLoginCon {
-    width: 100%;
+  width: 100%;
 }
 
 .loginContainer .loginC .btnLoginCon .btnLogin {
-    width: 80%;
-    padding: 10px 0;
-    font-size: 1.4em;
-    font-weight: 600;
-    font-family: nazanin;
-    border: 0;
-    background-color: rgb(211, 11, 11);
-    color: #fff;
-    border-radius: 10px;
-    cursor: pointer;
+  width: 80%;
+  padding: 10px 0;
+  font-size: 1.4em;
+  font-weight: 600;
+  font-family: nazanin;
+  border: 0;
+  background-color: rgb(211, 11, 11);
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .loginContainer .loginC .lastTexts {
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .loginContainer .loginC .lastTexts span {
-    color: #2c43aae5;
-    font-weight: 600;
-    cursor: pointer;
+  color: #2c43aae5;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .signUpContainer {
-    width: 400px;
-    height: 500px;
-    padding: 0 20px;
-    gap: 20px;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: #fff;
-    text-align: center;
-    border-radius: 16px;
-    overflow: hidden;
+  width: 400px;
+  height: 500px;
+  padding: 0 20px;
+  gap: 20px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 16px;
+  overflow: hidden;
 }
 
 .signUpContainer .outSignUpContainer {
-    width: 100%;
-    text-align: end;
-    font-size: 1.3em;
+  width: 100%;
+  text-align: end;
+  font-size: 1.3em;
 }
 
 .signUpContainer .outSignUpContainer i {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .signUpContainer .outSignUpContainer i:active {
-    color: tomato;
+  color: tomato;
 }
 
 .signUpContainer .signUpParag {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .signUpContainer .signUpParag p:first-child {
-    font-size: 1.5em;
-    color: #000000d5;
+  font-size: 1.5em;
+  color: #000000d5;
 }
 
 .signUpContainer .signUpInputs {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .signUpContainer .signUpInputs input {
-    padding: 12px;
-    border-radius: 20px;
-    outline: 0;
-    border: 1px solid #00000056;
+  padding: 12px;
+  border-radius: 20px;
+  outline: 0;
+  border: 1px solid #00000056;
 }
 
 .signUpContainer .signUpInputs div {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    margin: 10px 0;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 10px 0;
 }
 
 .signUpContainer .signUpInputs div label {
-    padding: 0 10px;
-    background-color: #fff;
-    position: absolute;
-    top: -12px;
-    right: 10px;
+  padding: 0 10px;
+  background-color: #fff;
+  position: absolute;
+  top: -12px;
+  right: 10px;
 }
 
 .signUpContainer .signUpBtn {
-    width: 100%;
+  width: 100%;
 }
 
 .signUpContainer .signUpBtn button {
-    width: 80%;
-    padding: 10px 0;
-    font-size: 1.2em;
-    font-weight: 600;
-    font-family: nazanin;
-    border: 0;
-    background-color: rgb(211, 11, 11);
-    color: #fff;
-    border-radius: 10px;
-    cursor: pointer;
+  width: 80%;
+  padding: 10px 0;
+  font-size: 1.2em;
+  font-weight: 600;
+  font-family: nazanin;
+  border: 0;
+  background-color: rgb(211, 11, 11);
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .signUpContainer .ParagcreateAccount {
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .signUpContainer .ParagcreateAccount span {
-    color: #2c43aae5;
-    font-weight: 600;
-    cursor: pointer;
+  color: #2c43aae5;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .topPageBtn {
-    position: fixed;
-    bottom: 50px;
-    right: 30px;
-    z-index: 5;
-    box-shadow: 0 0 1px 1px #0000004b;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    background-color: #fff;
-    border-radius: 50%;
-    cursor: pointer;
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  z-index: 5;
+  box-shadow: 0 0 1px 1px #0000004b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .topPageBtn i {
-    color: #000;
-    font-size: 2em;
+  color: #000;
+  font-size: 2em;
 }
 
 header {
-    position: sticky;
-    top: 0;
-    background-color: #fff;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 1px solid #0000001a;
-    z-index: 2;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #0000001a;
+  z-index: 2;
 }
 
 .header::selection {
-    color: transparent;
+  color: transparent;
 }
 
 .haederContainer {
-    width: 95%;
-    margin: 10px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  width: 95%;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .rightContent {
-    width: 100%;
-    max-width: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    column-gap: 10px;
-    padding: 5px 20px;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 10px;
+  padding: 5px 20px;
 }
 
 .rightContent svg {
-    min-width: 25px;
-    max-width: 25px;
-    display: none;
+  min-width: 25px;
+  max-width: 25px;
+  display: none;
 }
 
 .headerImg {
-    width: 40%;
-    max-width: 150px;
-    min-width: 50px;
+  width: 40%;
+  max-width: 150px;
+  min-width: 50px;
 }
 
 .headerImg img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .inputContainer {
-    width: 80%;
-    min-width: 140px;
-    max-width: 280px;
-    border-radius: 10px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #00000013;
+  width: 80%;
+  min-width: 140px;
+  max-width: 280px;
+  border-radius: 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00000013;
 }
 
 .inputContainer input {
-    font-size: 17px;
-    width: 98%;
-    min-width: 100px;
-    padding: 1em .5em;
-    outline: 0;
-    border: 0;
-    background-color: transparent;
+  font-size: 17px;
+  width: 98%;
+  min-width: 100px;
+  padding: 1em 0.5em;
+  outline: 0;
+  border: 0;
+  background-color: transparent;
 }
 
 .inputContainer label {
-    color: rgba(0, 0, 0, 0.438);
-    cursor: pointer;
-    padding: 0 10px;
+  color: rgba(0, 0, 0, 0.438);
+  cursor: pointer;
+  padding: 0 10px;
 }
 
 .inputContainer label:active i {
-    color: rgb(0, 140, 255);
+  color: rgb(0, 140, 255);
 }
 
 .leftContent {
-    width: 100%;
-    display: none;
-    align-items: center;
-    justify-content: flex-end;
+  width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .leftContent div {
-    width: 40px;
-    height: 40px;
-    padding: 25px;
-    border-radius: 50%;
-    box-shadow: 0 0 1px 1px #00000015;
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+  width: 40px;
+  height: 40px;
+  padding: 25px;
+  border-radius: 50%;
+  box-shadow: 0 0 1px 1px #00000015;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .leftContent div:active {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .leftContent div i {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .leftContent div:nth-child(1) i {
-    color: rgb(6, 192, 192);
+  color: rgb(6, 192, 192);
 }
 
 .leftContent div:nth-child(2) {
-    width: 150px;
-    border-radius: 20px;
-    display: flex;
-    justify-content: space-between;
+  width: 150px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .leftContent div:nth-child(2) span {
-    font-size: .8em;
+  font-size: 0.8em;
 }
 
 .containerImagaeS1 {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .sliderContainer {
-    width: 100%;
-    height: 100%;
-    position: relative;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 .slider {
-    width: 100%;
-    display: none;
+  width: 100%;
+  display: none;
 }
 
 .slider img {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
 }
 
 .active {
-    display: block;
+  display: block;
 }
 
 .slider span {
-    z-index: 2;
+  z-index: 2;
 }
 
 .prev,
 .next {
-    top: 50%;
-    margin-top: -22px;
-    padding: 20px;
-    color: rgb(255, 255, 255);
-    font-size: 18px;
-    width: 15px;
-    height: 15px;
-    cursor: pointer;
-    position: absolute;
-    font-weight: bolder;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  top: 50%;
+  margin-top: -22px;
+  padding: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  position: absolute;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .prev {
-    left: 0;
+  left: 0;
 }
 
 .next {
-    right: 0;
+  right: 0;
 }
 
 .next:hover,
 .prev:hover {
-    background-color: #0000003a;
+  background-color: #0000003a;
 }
 
 .dotContainer {
-    width: 100%;
-    bottom: 0;
-    text-align: center;
-    direction: ltr;
-    position: absolute;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  direction: ltr;
+  position: absolute;
 }
 
 .dot {
-    width: 13px;
-    height: 13px;
-    border-radius: 50%;
-    background-color: #d7d7d7;
-    display: inline-block;
-    transition: .3s ease-in;
-    cursor: pointer;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: #d7d7d7;
+  display: inline-block;
+  transition: 0.3s ease-in;
+  cursor: pointer;
 }
 
 .dot:hover {
-    background-color: slategray;
+  background-color: slategray;
 }
 
 .dotActive {
-    background-color: slategray;
+  background-color: slategray;
 }
 
 .fade {
-    animation: fade 1.2s;
-    -webkit-animation: fade 1.2s;
+  animation: fade 1.2s;
+  -webkit-animation: fade 1.2s;
 }
 
 @keyframes fade {
-    0% {
-        opacity: .4
-    }
-    100% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes fade {
-    0% {
-        opacity: .4
-    }
-    100% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .broSliderImg {
-    width: 50%;
-    height: 100%;
-    padding: 10px;
-    display: none;
-    align-items: center;
-    justify-content: center;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  width: 50%;
+  height: 100%;
+  padding: 0 10px;
+  display: none;
+  align-items: center;
+  justify-content: center;
 }
 
 .broSliderImg img {
-    width: 100%;
-    border-radius: 20px;
+  width: 100%;
+  border-radius: 20px;
 }
 
 .mainTopMenu {
-    width: 100%;
-    margin: 20px 0;
-    z-index: 2;
-    display: none;
+  width: 100%;
+  margin: 20px 0;
+  z-index: 2;
+  display: none;
 }
 
 .mainTopMenu .mainContainer {
-    width: 100%;
-    gap: 20px;
-    display: flex;
-    align-items: center;
+  width: 100%;
+  gap: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .mainTopMenu .mainContainer .menuBtn {
-    width: 160px;
-    padding: 14px 0;
-    font-size: .9em;
-    border-radius: 10px;
-    background: linear-gradient(90deg, #510499c0, #510499c0 40%, #fc0505);
-    text-align: center;
-    cursor: pointer;
+  width: 160px;
+  padding: 14px 0;
+  font-size: 0.9em;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #510499c0, #510499c0 40%, #fc0505);
+  text-align: center;
+  cursor: pointer;
 }
 
-.mainTopMenu .mainContainer .menuBtn:hover>nav {
-    display: flex;
+.mainTopMenu .mainContainer .menuBtn:hover > nav {
+  display: flex;
 }
 
 .mainTopMenu .mainContainer .menuBtn nav {
-    width: 95%;
-    z-index: 2;
-    padding: 20px;
-    border-radius: 20px;
-    z-index: 3;
-    box-shadow: 0 0 1px 1px #ddd;
-    animation: mainMenu .2s linear;
-    text-align: start;
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    cursor: default;
+  width: 95%;
+  z-index: 2;
+  padding: 20px;
+  border-radius: 20px;
+  z-index: 3;
+  box-shadow: 0 0 1px 1px #ddd;
+  animation: mainMenu 0.2s linear;
+  text-align: start;
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  cursor: default;
 }
 
 @keyframes mainMenu {
-    0% {
-        opacity: .4
-    }
-    100% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .mainTopMenu .mainContainer .menuBtn nav ul {
-    width: 20%;
-    padding: 20px;
-    border-radius: 20px;
-    gap: 10px;
-    background-color: #ddd;
-    flex-direction: column;
-    cursor: default;
-    display: flex;
+  width: 20%;
+  padding: 20px;
+  border-radius: 20px;
+  gap: 10px;
+  background-color: #ddd;
+  flex-direction: column;
+  cursor: default;
+  display: flex;
 }
 
 .mainTopMenu .mainContainer .menuBtn nav ul li {
-    padding: 10px;
-    border-radius: 10px;
-    display: flex;
-    cursor: pointer;
-    justify-content: space-between;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  cursor: pointer;
+  justify-content: space-between;
 }
 
 .mainTopMenu .mainContainer .menuBtn nav ul li:hover {
-    background: linear-gradient(90deg, transparent, #00000011);
-    color: red;
+  background: linear-gradient(90deg, transparent, #00000011);
+  color: red;
 }
 
 .mainTopMenu .mainContainer .menuBtn nav ul li:hover .menuImages {
-    display: flex;
+  display: flex;
 }
 
 .mainTopMenu .mainContainer .menuBtn nav ul li:hover a {
-    color: red;
+  color: red;
 }
 
 .mainTopMenu .mainContainer .menuBtn nav ul li a {
-    color: #000;
+  color: #000;
 }
 
 .mainTopMenu .mainContainer .menuBtn a {
-    color: #fff;
+  color: #fff;
 }
 
-.mainTopMenu .mainContainer>a {
-    padding: 14px 0;
-    font-size: 1em;
-    color: #000;
+.mainTopMenu .mainContainer > a {
+  padding: 14px 0;
+  font-size: 1em;
+  color: #000;
 }
 
 .mainTopMenu .mainContainer .menuBtn .menuImages {
-    width: 100%;
-    height: 400px;
-    display: flex;
-    justify-content: space-between;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .mainTopMenu .mainContainer .menuBtn .menuImages img {
-    width: 100%;
-    height: 100%;
-    display: none;
+  width: 100%;
+  height: 100%;
+  display: none;
 }
 
 .slider2Container {
-    width: 100%;
-    border-radius: 20px;
-    background-color: #eee;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 20px;
+  width: 100%;
+  border-radius: 20px;
+  background-color: #eee;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
 }
 
 .slider2Container .outerImage {
-    min-width: 100px;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: clamp(12px, 1px, 10px)
+  min-width: 100px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: clamp(12px, 1px, 10px);
 }
 
 .slider2Container .outerImage .outerImgText {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 .slider2Container .outerImage img {
-    width: 100%;
-    aspect-ratio: 16/9;
-    object-fit: contain;
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: contain;
 }
 
-.slider2Container .outerImage .outerImgText>div a {
-    padding: 10px 15px;
-    color: #fff;
-    display: block;
-    border-radius: 20px;
-    background-color: rgb(7, 1, 92);
+.slider2Container .outerImage .outerImgText > div a {
+  padding: 10px 15px;
+  color: #fff;
+  display: block;
+  border-radius: 20px;
+  background-color: rgb(7, 1, 92);
 }
 
 .slider2Container .sliderImage2,
 .slider2Container .sliderImage3 {
-    padding: 0 20px;
-    width: 80%;
-    height: 400px;
-    display: flex;
-    direction: ltr;
-    justify-content: center;
-    flex-direction: column;
+  padding: 0 20px;
+  width: 80%;
+  height: 400px;
+  display: flex;
+  direction: ltr;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .slider2Container .sliderImage3 {
-    display: flex;
-    direction: ltr;
-    justify-content: center;
-    flex-direction: column;
+  display: flex;
+  direction: ltr;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .slider2Container .item {
-    max-width: 500px;
-    height: 300px;
-    padding: 10px;
-    border-radius: 10px;
-    font-size: .8em;
-    font-weight: 0;
-    direction: rtl;
-    font-family: 'Roboto', sans-serif;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
+  max-width: 500px;
+  height: 300px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 0.8em;
+  font-weight: 0;
+  direction: rtl;
+  font-family: "Roboto", sans-serif;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
 }
 
 .slider2Container .item .imgSlider2 {
-    position: absolute;
-    top: 10px;
-    width: 100%;
+  position: absolute;
+  top: 0px;
+  width: 100%;
 }
 
 .slider2Container .item .imgSlider2 img {
-    width: 100%;
-    height: 120px;
-    aspect-ratio: 16/9;
-    object-fit: contain;
+  width: 100%;
+  height: 120px;
+  aspect-ratio: 16/9;
+  object-fit: contain;
 }
-.item .text1MainImageCard {
-    margin: 30px 0;
-}
+
 .slider2Container .item .priceContainer {
-    width: 100%;
-    font-size: 1.3em;
-    text-align: end;
-    font-family: nazanin;
-    position: absolute;
-    bottom: 10px;
-    left: 20px;
+  width: 100%;
+  font-size: 1.3em;
+  text-align: end;
+  font-family: nazanin;
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
 }
 
 .slider2Container .item .priceContainer .beforePrice b {
-    text-decoration: line-through;
+  text-decoration: line-through;
 }
 
 .slider2Container .item .priceContainer .newPrice b {
-    color: rgb(14, 163, 163);
+  color: rgb(14, 163, 163);
 }
 
 .containerImagaeS3 .slider2Container {
-    background-color: #033a8dde;
+  background-color: #033a8dde;
 }
 
 .containerImagaeS3 .outerImage {
-    background-color: transparent;
+  background-color: transparent;
 }
 
-.containerImagaeS3 .slider2Container .outerImgText div>a {
-    background-color: red;
+.containerImagaeS3 .slider2Container .outerImgText div > a {
+  background-color: red;
 }
 
 .item .imgSlider2 {
-    position: relative;
+  position: relative;
 }
 
-.item .imgSlider2>i {
-    background-color: rgba(0, 0, 0, 0.308);
-    z-index: 5;
-    padding: 0 20px;
-    width: 100%;
-    height: 100%;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: -10px;
-    color: #fff;
-    font-size: 3em;
+.item .imgSlider2 > i {
+  background-color: rgba(0, 0, 0, 0.308);
+  z-index: 5;
+  padding: 0 20px;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -10px;
+  color: #fff;
+  font-size: 3em;
 }
 
-.item:hover .imgSlider2>i {
-    display: flex;
-    transition: all 1s;
+.item:hover .imgSlider2 > i {
+  display: flex;
+  transition: all 1s;
 }
 
 .sectionImage4 .imageContainer4 {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.sectionImage4 .imageContainer4>div {
-    width: 100%;
+.sectionImage4 .imageContainer4 > div {
+  width: 100%;
 }
 
-.sectionImage4 .imageContainer4>div img {
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
+.sectionImage4 .imageContainer4 > div img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
 }
 
 .headPhoneContainer .headPhoneImg img {
-    width: 100%;
-    border-radius: 20px;
+  width: 100%;
+  border-radius: 20px;
 }
 
 .containerImagaeS5 .slider2Container {
-    background: linear-gradient(90deg, #1a879f 5%, #d21e27 89%);
+  background: linear-gradient(90deg, #1a879f 5%, #d21e27 89%);
 }
 
 .containerImagaeS5 .slider2Container .outerImage {
-    color: #fff;
+  color: #fff;
 }
 
 .images6Container {
-    direction: ltr;
+  direction: ltr;
 }
 
 .images6Container img {
-    border-radius: 20px;
-}
-.owl-dots {
-    display: none;
-}
-.bottomUniversity>div {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 5px;
+  border-radius: 20px;
 }
 
-.bottomUniversity>div i {
-    font-size: 18px;
+.owl-dots {
+  display: none;
+}
+
+.bottomUniversity > div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.bottomUniversity > div i {
+  font-size: 18px;
 }
 
 .lastImagesSlider {
-    direction: ltr;
-    overflow: hidden;
-    height: 100px;
+  direction: ltr;
+  overflow: hidden;
+  height: 100px;
 }
 
 .lastSliderContainer .lastImagesSlider .item img {
-    width: 100%;
-    aspect-ratio: 16/9;
-    object-fit: contain;
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: contain;
+}
+
+.item .text1MainImageCard {
+  margin: 30px 0;
 }
 
 .aboutShop .aboutShopContainer {
-    width: 100%;
+  width: 100%;
 }
 
 .aboutShop .aboutShopContainer .titleAboutShop {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .aboutShop .aboutShopContainer .titleAboutShop div h3 {
-    color: #000;
+  color: #000;
 }
 
 .aboutShop .aboutShopContainer .titleAboutShop div img {
-    width: 150px;
-    aspect-ratio: 16/9;
-    object-fit: contain;
+  width: 150px;
+  aspect-ratio: 16/9;
+  object-fit: contain;
 }
 
 .aboutShop .aboutShopContainer .titleAboutShop div:last-child {
-    padding: 0 15px;
-    border-right: 1px solid #000;
-    color: var(--p-color);
+  padding: 0 15px;
+  border-right: 1px solid #000;
+  color: var(--p-color);
 }
 
 .aboutShop .aboutShopContainer .paragraphAboutShop {
-    width: 100%;
-    color: var(--p-color);
+  width: 100%;
+  color: var(--p-color);
+  text-align: justify;
 }
 
 .aboutShop .aboutShopContainer .paragraphAboutShop p {
-    width: 80%;
-    text-align:justify;
+  width: 80%;
 }
 
 .btnPhone {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 footer {
-    width: 100%;
-    overflow: hidden;
+  width: 100%;
+  overflow: hidden;
 }
 
 footer .contactWe {
-    width: 100%;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background-color: #00000011;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #00000011;
 }
 
 footer .contactWe .textContact {
-    display: none;
+  display: none;
 }
 
 footer .contactWe .soshalMedia {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
 
-footer .contactWe .soshalMedia>div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
+footer .contactWe .soshalMedia > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 }
 
-footer .contactWe .soshalMedia>div i {
-    font-size: 1.6em;
-    color: #000069;
+footer .contactWe .soshalMedia > div i {
+  font-size: 1.6em;
+  color: #000069;
 }
 
-footer .contactWe .soshalMedia>div>div:last-child {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    font-size: .8em;
+footer .contactWe .soshalMedia > div > div:last-child {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-size: 0.8em;
 }
 
 footer .aboutPlaziu {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    flex-direction: column;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  flex-direction: column;
 }
 
-footer .aboutPlaziu>div {
-    margin: 40px 0;
+footer .aboutPlaziu > div {
+  margin: 40px 0;
 }
 
 footer .aboutPlaziu .rightContentFooter {
-    width: 100%;
-    display: none;
+  width: 100%;
+  display: none;
 }
 
-footer .aboutPlaziu .rightContentFooter>div {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+footer .aboutPlaziu .rightContentFooter > div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-footer .aboutPlaziu .rightContentFooter>div ul li a {
-    color: var(--p-color);
+footer .aboutPlaziu .rightContentFooter > div ul li a {
+  color: var(--p-color);
 }
 
-footer .aboutPlaziu .rightContentFooter>div ul li a:hover {
-    color: #000;
+footer .aboutPlaziu .rightContentFooter > div ul li a:hover {
+  color: #000;
 }
 
 footer .aboutPlaziu .rightContentFooter .logoImgFotter {
-    width: 300px;
+  width: 300px;
 }
 
 footer .aboutPlaziu .rightContentFooter .logoImgFotter img {
-    width: 80px;
-    height: 40px;
+  width: 80px;
+  height: 40px;
 }
 
 footer .aboutPlaziu .leftContentFooter {
-    width: 100%;
-    display: flex;
-    align-items: end;
-    flex-direction: column;
-    padding: 0 20px;
+  width: 100%;
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  padding: 0 20px;
 }
 
-footer .aboutPlaziu .leftContentFooter>div {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+footer .aboutPlaziu .leftContentFooter > div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-footer .aboutPlaziu .leftContentFooter>div>div {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
+footer .aboutPlaziu .leftContentFooter > div > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
 }
 
 footer .aboutPlaziu .leftContentFooter span {
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 
-footer .aboutPlaziu .leftContentFooter>div>div>div {
-    width: 70px;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    box-shadow: 0 0 1px 1px var(--p-color);
-    font-size: 2em;
-    color: var(--p-color);
-    cursor: pointer;
+footer .aboutPlaziu .leftContentFooter > div > div > button {
+  width: 70px;
+  height: 70px;
+  border: 0;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 0 1px 1px var(--p-color);
+  font-size: 2em;
+  color: var(--p-color);
+  cursor: pointer;
 }
 
-footer .aboutPlaziu .leftContentFooter>div>div>div:hover {
-    color: #000;
+footer .aboutPlaziu .leftContentFooter > div > div > button:hover {
+  color: #000;
 }
 
 footer .aboutPlaziu {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
 }
 
 footer .aboutPlaziu .phoneContentFooter {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    color: var(--p-color);
-    gap: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: var(--p-color);
+  gap: 20px;
 }
 
-footer .aboutPlaziu .phoneContentFooter p {
-    font-size: .8em;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #00000046;
+footer .aboutPlaziu .phoneContentFooter button {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 0.8em;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #00000046;
 }
 
 footer .aboutPlaziu .phoneContentFooter ul {
-    display: none;
+  display: none;
 }
 
-footer .aboutPlaziu .phoneContentFooter>div {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+footer .aboutPlaziu .phoneContentFooter > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-footer .aboutPlaziu .phoneContentFooter .aboutPlaziuText>div {
-    display: flex;
-    justify-content: space-between;
+footer .aboutPlaziu .phoneContentFooter .aboutPlaziuText > div {
+  display: flex;
+  justify-content: space-between;
 }
 
-footer .aboutPlaziu .phoneContentFooter>div svg {
-    width: 10px;
+footer .aboutPlaziu .phoneContentFooter > div svg {
+  width: 10px;
 }
 
-footer .aboutPlaziu .phoneContentFooter>div ul li a {
-    color: var(--p-color);
+footer .aboutPlaziu .phoneContentFooter > div ul li a {
+  color: var(--p-color);
 }
 
-footer .aboutPlaziu .phoneContentFooter>div ul li a:hover {
-    color: #000;
+footer .aboutPlaziu .phoneContentFooter > div ul li a:hover {
+  color: #000;
 }
 
 footer .aboutPlaziu .phoneContentFooter .logoImgFotter {
-    width: 300px;
+  width: 300px;
 }
 
 footer .aboutPlaziu .phoneContentFooter .logoImgFotter img {
-    width: 80px;
-    height: 40px;
+  width: 80px;
+  height: 40px;
 }
 
 .containerlastContainer {
-    border-top: 1px solid #00000056;
-    padding: 5px 20px;
+  border-top: 1px solid #00000056;
+  padding: 5px 20px;
 }
 
 .containerlastContainer .lastContainer p {
-    color: var(--p-color);
+  color: var(--p-color);
 }
 
 .containerlastContainer .lastContainer i {
-    color: rgb(6, 192, 192);
+  color: rgb(6, 192, 192);
 }
 
 .phoneContentFooter .phoneList {
-    font-size: .8em;
+  font-size: 0.8em;
 }
-
 
 /* ----------------------phone menu------------------ */
 
-
 .phoneOptionContainer {
-    width: 100%;
-    position: fixed;
-    margin: 0;
-    bottom: 0;
-    padding: 10px 0;
-    z-index: 2;
-    box-shadow: 0 0 1px 1px #eee;
-    background-color: #fff;
+  width: 100%;
+  position: fixed;
+  margin: 0;
+  bottom: 0;
+  padding: 10px 0;
+  z-index: 2;
+  box-shadow: 0 0 1px 1px #eee;
+  background-color: #fff;
 }
 
-.phoneOptionContainer>div {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.phoneOptionContainer > div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.phoneOptionContainer>div>a {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    color: #000000a1;
+.phoneOptionContainer > div > a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: #000000a1;
 }
 
-.phoneOptionContainer>div>a i {
-    font-size: 7vw;
-    color: #000000a1;
+.phoneOptionContainer > div > a i {
+  font-size: 25px;
+  color: #000000a1;
 }
 
-.phoneOptionContainer>div>a span {
-    font-size: 3vw;
-    font-weight: 600;
-    color: #000;
-}
-
-.show {
-    display: flex;
-}
-
-.hide {
-    display: none;
-}
-
-.showB {
-    display: block;
+.phoneOptionContainer > div > a span {
+  font-size: 11px;
+  font-weight: 600;
+  color: #000;
 }
 
 .show {
-    display: flex;
+  display: flex;
 }
 
 .hide {
-    display: none;
+  display: none;
 }
 
 .showB {
-    display: block;
+  display: block;
 }
