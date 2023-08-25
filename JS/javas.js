@@ -234,21 +234,6 @@ window.addEventListener('scroll', (e) => {
 topPageBtn.addEventListener('click', () => {
     window.scrollTo(0, 0);
 });
-let visible = false
-// for (let index = 0; index < phoneContent.length; index++) {
-//     phoneContent[index].addEventListener('click', () => {
-//         if (!visible) {
-//             visible = true
-//             svgAbout[index].style.rotate = '180deg'
-//             svgAbout[index].style.fill = '#df02029f'
-//             uls[index].style.display = 'block'
-//         }
-//         visible = false
-//         svgAbout[index].style.rotate = '0deg'
-//         svgAbout[index].style.fill = '#000'
-//         uls[index].style.display = 'none'
-//     })
-// }
 phoneContent.forEach((item, index) => {
     item.addEventListener('click', () => {
         if (!uls[index].classList.contains('active')) {
